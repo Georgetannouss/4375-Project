@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Tod Realty</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
+    <style>
+        body {
+            margin: 20px; /* Add margins to the body */
+            font-family: 'Abel', sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+        }
+
+        header {
+            margin-bottom: 30px; /* Margin between header and FAQ section */
+        }
+
+        .faq-container {
+            max-width: 800px; /* Set a max width for the container */
+            margin: 0 auto; /* Center the container */
+            background-color: #ffffff; /* White background for the FAQ */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px; /* Padding inside the container */
+        }
+
+        h2 {
+            text-align: center; /* Center the heading */
+            color: #007BFF; /* Optional: Change color for emphasis */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        .faq-item {
+            border: 1px solid #ccc; /* Border around each FAQ item */
+            border-radius: 5px; /* Rounded corners for items */
+            margin-bottom: 15px; /* Space between items */
+            overflow: hidden; /* Prevent overflow */
+            transition: transform 0.3s; /* Animation for hover effect */
+        }
+
+        .faq-item:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+        }
+
+        .faq-question {
+            background-color: #f0a14d; 
+            color: #fff; /* White text color */
+            padding: 15px;
+            cursor: pointer;
+            margin: 0;
+            font-size: 1.1em; /* Slightly larger font size */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .faq-answer {
+            display: none; /* Hidden by default */
+            padding: 15px;
+            background-color: #ffffff; /* White background for answers */
+            border-top: 1px solid #ccc; /* Border between question and answer */
+            opacity: 0; /* Start hidden */
+            max-height: 0; /* Start with no height */
+            overflow: hidden; /* Prevent overflow */
+            transition: opacity 0.3s ease, max-height 0.3s ease; /* Animation for answer */
+        }
+
+        .faq-answer.show {
+            display: block; /* Show answer */
+            opacity: 1; /* Fade in */
+            max-height: 200px; /* Set a max height for the answer */
+        }
+
+        .faq-question:hover {
+            background-color: #f1a138; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <img src="Images/mainlogo.png" alt="Company Logo" class="logo"> 
+        <nav>
+            <ul>
+                <li><a href="#">Property Listings</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Me</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#" class="signup-btn">Login or Sign Up</a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: What types of properties does Tod Realty specialize in?</h3>
+            <div class="faq-answer">
+                <p>A: Tod Realty specializes in residential, commercial, and rental properties. We handle everything from single-family homes to large commercial spaces, ensuring that you find the perfect property for your needs.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: How do I schedule a property viewing?</h3>
+            <div class="faq-answer">
+                <p>A: You can schedule a property viewing by contacting our office directly or using the "Schedule a Viewing" feature on our website. Simply select the property you're interested in, choose an available time, and one of our agents will confirm the appointment.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: What is the process for buying a home with Tod Realty?</h3>
+            <div class="faq-answer">
+                <p>A: Our buying process includes an initial consultation to understand your needs, followed by property searches, viewings, negotiations, and closing assistance. We guide you through each step to ensure a smooth and efficient experience.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: How do I list my property for sale with Tod Realty?</h3>
+            <div class="faq-answer">
+                <p>A: To list your property, please fill out the "List My Property" form on our website or contact us directly. One of our agents will get in touch to discuss your property, arrange for a valuation, and guide you through the listing process.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: What are the commission fees for selling a property?</h3>
+            <div class="faq-answer">
+                <p>A: Our commission fees are competitive and depend on the type of property and the specific services you require. Contact us for a detailed breakdown of our fees and how they apply to your listing.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: Do you offer property management services?</h3>
+            <div class="faq-answer">
+                <p>A: Yes, Tod Realty provides comprehensive property management services, including tenant screening, rent collection, maintenance, and more. We take care of your property so you don't have to worry about the day-to-day operations.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: How do I get a free property valuation?</h3>
+            <div class="faq-answer">
+                <p>A: You can request a free property valuation by filling out our online form or calling our office. One of our expert agents will evaluate your property and provide a detailed report on its current market value.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: What areas does Tod Realty serve?</h3>
+            <div class="faq-answer">
+                <p>A: Tod Realty serves a wide range of locations, including [insert primary areas or neighborhoods]. Whether you're buying or selling, we have the local knowledge to assist you in finding the right property or buyer.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: How can I stay updated on new listings?</h3>
+            <div class="faq-answer">
+                <p>A: You can stay updated by signing up for our email alerts or by following us on social media. We regularly post new listings and market updates, ensuring that you're the first to know about properties that match your criteria.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: Can Tod Realty help with financing options?</h3>
+            <div class="faq-answer">
+                <p>A: Yes, we work closely with a network of trusted lenders to help our clients secure the best financing options available. Whether you're a first-time buyer or a seasoned investor, we can connect you with experts who will assist in securing the right loan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: What sets Tod Realty apart from other realty groups?</h3>
+            <div class="faq-answer">
+                <p>A: Tod Realty is committed to personalized service, deep market knowledge, and client satisfaction. Our agents go above and beyond to ensure a seamless experience, whether you're buying, selling, or managing a property.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Q: How long does it take to close on a property?</h3>
+            <div class="faq-answer">
+                <p>A: The closing process typically takes between 30 to 45 days, depending on various factors such as financing, inspections, and negotiations. Our agents will work to ensure a timely and smooth closing process.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <img src="images/MainLogo.png" alt="Logo">
+            <span class="footer-text">Unlock Your Future One Home at a Time.</span>
+        </div>
+        <div class="footer-columns">
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" title="Follow us on Facebook">
+                    <img src="images/Facebook.webp" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank" title="Follow us on Twitter">
+                    <img src="images/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank" title="Follow us on Instagram">
+                    <img src="images/Instagram.png" alt="Instagram">
+                </a>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#">About me</a>
+                <a href="#">Listings</a>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="#">Help/FAQ</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="footer-column">
+                <h3>More</h3>
+                <a href="#">Services</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.classList.toggle('show'); // Toggle the 'show' class for animation
+            });
+        });
+    </script>
+</body>
+</html>
