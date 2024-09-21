@@ -583,3 +583,139 @@ footer {
         margin-bottom: 20px; /* Space between stacked columns */
     }
 }
+
+/*About me css */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Ensure the background stays white */
+    z-index: 1000; /* Ensure it's above other elements */
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E0E0E0; 
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px; 
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #F8F9FA; /* Soft background color */
+    color: #333; /* Text color */
+    padding: 40px 60px; /* Spacing for footer content */
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    border-top: 1px solid #E0E0E0; /* Light border for top of the footer */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.footer-logo img {
+    width: 100px; /* Adjust based on actual logo size */
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+    color: #1A73E8; /* Blue color on hover */
+}
+
+/* About Me Section */
+.about-me {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center; /* Center text alignment */
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Volkhov', serif;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column; /* Make content stack vertically */
+    justify-content: center;
+    align-items: center; /* Horizontally centers content */
+    gap: 20px;
+}
+
+.about-img {
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* About Me Paragraphs - Normal State */
+.about-me-content p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 20px;
+    background-color: #fff; /* Ensure the background is always white */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect */
+.about-me-content p:hover {
+    background-color: #fff; /* Keep the background white on hover */
+    color: #333; /* Darker text color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
