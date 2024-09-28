@@ -11,29 +11,34 @@
     <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
     <style>
         body {
-            margin: 20px; /* Add margins to the body */
+            margin: 200px; /* Add margins to the body */
             font-family: 'Abel', sans-serif;
-            background-color: #f4f4f4; /* Light background for contrast */
-            color: #333; /* Dark text for readability */
+            background-color: #ffffff; /* Light background for contrast */
+            
+            color: #333; /* Dark text for readability */    
         }
 
         header {
             margin-bottom: 30px; /* Margin between header and FAQ section */
         }
 
-        .faq-container {
-            max-width: 800px; /* Set a max width for the container */
-            margin: 0 auto; /* Center the container */
-            background-color: #ffffff; /* White background for the FAQ */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            padding: 20px; /* Padding inside the container */
-        }
+       
 
         h2 {
             text-align: center; /* Center the heading */
-            color: #007BFF; /* Optional: Change color for emphasis */
+            font-family: 'Abel', sans-serif;
+            font-size: 3em;
+            color: #000000; /* Optional: Change color for emphasis */
             margin-bottom: 20px; /* Space below the heading */
+            animation: bounce 0.5s ease forwards; /* Apply animation */
+        }
+
+        h3 {
+            text-align: center; /* Center the heading */
+            font-family: 'Abel', sans-serif;
+            font-size:x-large
+            color: #000000; /* Optional: Change color for emphasis */
+            margin-bottom: 60px; /* Space below the heading */
         }
 
         .faq-item {
@@ -49,13 +54,18 @@
         }
 
         .faq-question {
-            background-color: #f0a14d; 
+            background-color: #976c42; 
             color: #fff; /* White text color */
             padding: 15px;
             cursor: pointer;
-            margin: 0;
-            font-size: 1.1em; /* Slightly larger font size */
-            transition: background-color 0.3s; /* Smooth transition */
+            margin-bottom: 10px; /* Space between questions */
+            border-radius: 5px; /* Rounded corners for questions */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and transform */
+        }
+
+        .faq-question:hover {
+            background-color: #f1a138; /* Darker color on hover */
+            transform: scale(1.5); /* Scale up the question slightly */
         }
 
         .faq-answer {
@@ -66,6 +76,11 @@
             opacity: 0; /* Start hidden */
             max-height: 0; /* Start with no height */
             overflow: hidden; /* Prevent overflow */
+            font-size: 1.1em; /* Slightly larger font size */
+            font-family: 'Abel', sans-serif;
+            color: #000000;
+            margin-bottom: 10px; /* Space between questions */
+            text-align: center; /* Center the text */
             transition: opacity 0.3s ease, max-height 0.3s ease; /* Animation for answer */
         }
 
@@ -73,10 +88,27 @@
             display: block; /* Show answer */
             opacity: 1; /* Fade in */
             max-height: 200px; /* Set a max height for the answer */
+            animation: slideIn 0.5s ease forwards; /* Apply animation */
         }
 
         .faq-question:hover {
             background-color: #f1a138; /* Darker color on hover */
+        }
+        @keyframes bounce {
+         0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+         40% { transform: translateY(-30px); }
+         60% { transform: translateY(-15px); }
+         }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px); /* Start slightly above */
+                opacity: 0; /* Start invisible */
+            }
+            to {
+                transform: translateY(0); /* End at original position */
+                opacity: 1; /* End fully visible */
+            }
+            
         }
     </style>
 </head>
@@ -100,6 +132,7 @@
     <!-- FAQ Section -->
     <div class="faq-container">
         <h2>Frequently Asked Questions</h2>
+        <h3>Click on the question to see the answer!</h3>
 
         <div class="faq-item">
             <h3 class="faq-question">Q: What types of properties does Tod Realty specialize in?</h3>
