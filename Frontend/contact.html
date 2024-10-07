@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Real Estate Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section from index.html -->
+    <header>
+        <img src="mainlogo.png" alt="Company Logo" class="logo"> 
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="#">Property Listings</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Me</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#" class="signup-btn">Login or Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="contact-us">
+        <h1>Contact Us</h1>
+        <p>We will get right back to you.</p>
+
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to receive email and/or SMS communications from TOD Realty</label>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section from index.html -->
+    <footer>
+        <div class="footer-logo">
+            <img src="MainLogo.png" alt="Logo">
+            <span class="footer-text">Unlock Your Future One Home at a Time.</span>
+        </div>
+        <div class="footer-columns">
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" title="Follow us on Facebook">
+                    <img src="Facebook.webp" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank" title="Follow us on Twitter">
+                    <img src="twitter.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank" title="Follow us on Instagram">
+                    <img src="Instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="about.html">About me</a>
+                <a href="#">Listings</a>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="#">Help/FAQ</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="footer-column">
+                <h3>More</h3>
+                <a href="#">Services</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

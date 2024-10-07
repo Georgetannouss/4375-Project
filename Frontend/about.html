@@ -4,89 +4,346 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Real Estate Expert</title>
+    <title>About Us - Real Estate Professional</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Abel', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Global styling */
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #1a1a2e;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* History Section */
+        .history-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .history-section h2 {
+            font-size: 2.5rem;
+        }
+
+        .history-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Core Values Section with rounded corners */
+        .core-values {
+            background-color: #003366;
+            padding: 60px 20px;
+            color: white;
+            border-radius: 20px; /* Rounded corners for core values section */
+        }
+
+        .core-values h2 {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .value-item {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: #333;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-item i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .value-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .value-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Realtor's Photo Section with Box */
+        .realtor-photo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .realtor-photo {
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Styled box for the realtor's information */
+        .realtor-info-box {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .realtor-info-box p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .realtor-info-box h2 {
+            color: #007BFF;
+        }
+
+        /* Fancy Section Boxes */
+        .fancy-section {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .fancy-section h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        .fancy-section p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .fancy-section .icon {
+            font-size: 50px;
+            margin-right: 25px;
+            color: #FF7F50;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 60px;
+            background-color: #F8F9FA !important; /* Ensure navy color is applied */
+            text-align: center;
+        }
+
+        .footer-logo img {
+            width: 100px;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .footer-columns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .fancy-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .fancy-section .icon {
+                margin-bottom: 15px;
+            }
+
+            .testimonial-cards {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Wrapper to hold the page content -->
-    <div class="content-wrapper">
-        <!-- Navigation Bar -->
-        <div class="background-section">
-            <header>
-                <img src="Images/mainlogo.png" alt="Company Logo" class="logo">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html" class="active">About Me</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#" class="signup-btn">Login or Sign Up</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-        <!-- Main Content -->
-        <main>
-            <section class="about-me">
-                <h2>About Me</h2>
-                <div class="about-me-content">
-                    <img src="images/about-photo.jpg" alt="Real Estate Expert" class="about-img">
-                    <p>
-                        Welcome! I'm Sai's Dad, a passionate and experienced real estate expert with over 10,000 years of experience in helping individuals and families find their dream homes. My journey in real estate began with a deep love for architecture and a commitment to offering personalized services tailored to each client’s unique needs.
-                    </p>
-                    <p>
-                        I pride myself on providing exceptional market insights and guiding clients through smooth and hassle-free transactions. Whether you're buying your first home, selling a property, or looking to invest, I am here to ensure that you make informed, confident decisions.
-                    </p>
-                    <p>
-                        When I’m not working, I enjoy spending time with my loving family as you spend time with yours! Let's work together to find a place you or your family will love!
-                    </p>
-                </div>
-            </section>
-        </main>
+    <!-- Header and Navigation -->
+    <div class="background-section">
+        <header>
+            <img src="mainlogo.png" href="index.html" alt="Company Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Me</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#" class="signup-btn">Login or Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
 
-    <!-- Footer -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- History Section -->
+        <section class="history-section">
+            <h2>About Us</h2>
+            <p>
+                Founded in 2000, [Real Estate Company] has been helping families find their dream homes for over two decades. We pride ourselves on maintaining a high standard of excellence, with a proven track record of success in helping clients buy, sell, and invest in real estate.
+            </p>
+        </section>
+
+        <!-- Realtor's Photo Section with Info Box -->
+        <section class="realtor-photo-section">
+            <img src="Rick.png" alt="Realtor" class="realtor-photo">
+            <div class="realtor-info-box">
+                <h2>Your Realtor</h2>
+                <p>
+                    Meet [Realtor Name], a dedicated real estate professional with years of experience. [Realtor Name] provides personalized services, market expertise, and a genuine commitment to helping you find your perfect home.
+                </p>
+            </div>
+        </section>
+
+        <!-- Fancy Section Example (if needed) -->
+        <section class="fancy-section">
+            <div class="icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <div>
+                <center>
+                    <h3>Why Choose Us?</h3>
+                    <p>
+                        With decades of experience, we offer personalized services tailored to your needs, providing market insights, guidance, and seamless real estate transactions.
+                    </p>
+                </center>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="core-values">
+            <h2>Core Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Integrity</h3>
+                    <p>
+                        We believe in doing the right thing, always. Our commitment to ethical practices ensures trust and transparency with our clients.
+                    </p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>
+                        We stay ahead of market trends and use the latest technologies to help our clients make informed decisions.
+                    </p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Respect</h3>
+                    <p>
+                        We value our relationships with clients, colleagues, and partners. We treat everyone with the respect they deserve.
+                    </p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Service</h3>
+                    <p>
+                        We are committed to delivering exceptional service. Your satisfaction is our highest priority.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <footer>
         <div class="footer-logo">
-            <img src="images/MainLogo.png" alt="Logo">
+            <img src="MainLogo.png" alt="Logo">
             <span class="footer-text">Unlock Your Future One Home at a Time.</span>
         </div>
         <div class="footer-columns">
             <div class="social-media">
                 <a href="https://facebook.com" target="_blank" title="Follow us on Facebook">
-                    <img src="images/Facebook.webp" alt="Facebook">
+                    <img src="Facebook.webp" alt="Facebook">
                 </a>
                 <a href="https://twitter.com" target="_blank" title="Follow us on Twitter">
-                    <img src="images/twitter.png" alt="Twitter">
+                    <img src="twitter.png" alt="Twitter">
                 </a>
                 <a href="https://instagram.com" target="_blank" title="Follow us on Instagram">
-                    <img src="images/Instagram.png" alt="Instagram">
+                    <img src="Instagram.png" alt="Instagram">
                 </a>
             </div>
+            
             <div class="footer-column">
                 <h3>Company</h3>
                 <a href="about.html">About me</a>
-                <a href="listings.html">Listings</a>
+                <a href="#">Listings</a>
             </div>
             <div class="footer-column">
                 <h3>Contact</h3>
-                <a href="help.html">Help/FAQ</a>
-                <a href="login.html">Login</a>
+                <a href="#">Help/FAQ</a>
+                <a href="#">Login</a>
             </div>
             <div class="footer-column">
                 <h3>More</h3>
-                <a href="services.html">Services</a>
+                <a href="#">Services</a>
             </div>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>

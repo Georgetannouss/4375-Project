@@ -402,10 +402,11 @@ nav ul li a.signup-btn {
 
 .subscribe {
     background-color: #fff;
-    padding: 50px 0;
+    padding: 250px 0px; /* Reduced the top and bottom padding */
     text-align: center;
     overflow: hidden;
 }
+
 
 .subscribe .container {
     max-width: 700px;
@@ -718,4 +719,85 @@ footer {
     background-color: #fff; /* Keep the background white on hover */
     color: #333; /* Darker text color on hover */
     transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+/* Contact Us Page */
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 100px 20px;
+}
+
+.contact-us h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-us p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.contact-form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
 }
