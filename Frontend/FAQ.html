@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Tod Realty</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
+    <title>Contact Us - Real Estate Website</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             margin: 200px; /* Add margins to the body */
@@ -117,7 +117,7 @@
 
     <!-- Navigation Bar -->
     <header>
-        <img src="Images/mainlogo.png" alt="Company Logo" class="logo"> 
+        <img src="mainlogo.png" alt="Company Logo" class="logo"> 
         <nav>
             <ul>
                 <li><a href="#">Property Listings</a></li>
@@ -220,28 +220,28 @@
         </div>
     </div>
 
-    <!-- Footer -->
+
     <footer>
         <div class="footer-logo">
-            <img src="images/MainLogo.png" alt="Logo">
+            <img src="MainLogo.png" alt="Logo">
             <span class="footer-text">Unlock Your Future One Home at a Time.</span>
         </div>
         <div class="footer-columns">
             <div class="social-media">
                 <a href="https://facebook.com" target="_blank" title="Follow us on Facebook">
-                    <img src="images/Facebook.webp" alt="Facebook">
+                    <img src="Facebook.webp" alt="Facebook">
                 </a>
                 <a href="https://twitter.com" target="_blank" title="Follow us on Twitter">
-                    <img src="images/twitter.png" alt="Twitter">
+                    <img src="twitter.png" alt="Twitter">
                 </a>
                 <a href="https://instagram.com" target="_blank" title="Follow us on Instagram">
-                    <img src="images/Instagram.png" alt="Instagram">
+                    <img src="Instagram.png" alt="Instagram">
                 </a>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Company</h3>
-                <a href="#">About me</a>
+                <a href="about.html">About me</a>
                 <a href="#">Listings</a>
             </div>
             <div class="footer-column">
@@ -256,13 +256,16 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const answer = item.nextElementSibling;
-                answer.classList.toggle('show'); // Toggle the 'show' class for animation
-            });
-        });
-    </script>
-</body>
 </html>
+<script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            answer.classList.toggle('show'); // Toggle the 'show' class for animation
+        });
+    });
+</script>
+
+
+</html>
+</body>
