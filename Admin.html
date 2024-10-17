@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Property Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <img src="Images/mainlogo.png" alt="Company Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="property-listings.html">Property Listings</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Me</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Manage Property Listings</h2>
+        <form id="add-listing-form">
+            <input id="property-name" type="text" placeholder="Property Name" required>
+            <input id="property-price" type="text" placeholder="Price" required>
+            <input id="property-address" type="text" placeholder="Address" required>
+            <input id="property-image" type="text" placeholder="Image URL" required>
+            <button type="submit">Add Listing</button>
+        </form>
+    
+        <div id="property-list" class="listings-grid">
+            
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/MainLogo.png" alt="Logo" style="width: 120px;">
+            <span class="footer-text">Unlock Your Future One Home at a Time.</span>
+        </div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#">About Me</a>
+                <a href="#">Listings</a>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="#">Help/FAQ</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="footer-column">
+                <h3>More</h3>
+                <a href="#">Services</a>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

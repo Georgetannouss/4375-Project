@@ -721,7 +721,6 @@ footer {
     transform: scale(1.05); /* Slight zoom effect */
 }
 
-
 /* Contact Us Page */
 .contact-us {
     display: flex;
@@ -729,6 +728,18 @@ footer {
     align-items: center;
     text-align: left;
     padding: 100px 20px;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-us h1 {
@@ -736,6 +747,16 @@ footer {
     font-size: 3rem;
     color: #333;
     margin-bottom: 10px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .contact-us p {
@@ -749,7 +770,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px 20px;
-    max-width: 400px;
+    max-width: 800px;
     width: 100%;
 }
 
@@ -758,6 +779,7 @@ footer {
     margin-bottom: 5px;
     font-size: 1rem;
     color: #333;
+    font-weight: bold;
 }
 
 .contact-form input,
@@ -766,38 +788,39 @@ footer {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0px;
     font-size: 1rem;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #007BFF;
+    border-color: #f7a356;
     outline: none;
 }
 
 .contact-form .checkbox-container {
     display: flex;
-    align-items: center;
+    
     margin-bottom: 20px;
 }
 
 .contact-form .checkbox-container input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .contact-form button {
     width: 100%;
     padding: 15px;
-    background-color: #007BFF;
+    background-color: #ffa845;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    animation: fadeIn 0.5s ease 3s;
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #e99343;
 }
