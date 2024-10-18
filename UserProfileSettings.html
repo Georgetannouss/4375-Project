@@ -1,0 +1,330 @@
+<!-- userProfileSettings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <style>
+        /* Embedded CSS styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Abel', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 120px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            transition: font-weight 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            font-weight: bold;
+        }
+
+        .user-profile-settings {
+            max-width: 600px;
+            margin: 80px auto 20px; /* Adjusted for fixed header */
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #fbaa28;
+            outline: none;
+        }
+
+        .edit-mode {
+            border-color: orange; /* Outline color when in edit mode */
+        }
+
+        .btn {
+            background-color: #fba82c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ff9a1e;
+        }
+
+        .change-password-section {
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .last-login-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        footer .footer-logo img {
+            width: 100px;
+        }
+
+        footer .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        footer .footer-column {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        footer .footer-column h3 {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        footer .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Images/mainlogo.png" alt="Company Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="property-listings.html">Property Listings</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Me</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="user-profile-settings">
+        <h2>User Profile Settings</h2>
+        
+        <form id="profileForm" method="POST" action="updateProfile.php"> <!-- Adjust action to your backend -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="currentUsername" required readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="currentEmail@example.com" required readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" value="123-456-7890" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" value="123 Main St" readonly>
+            </div>
+
+            <button type="button" id="editProfileBtn" class="btn">Edit Information</button>
+            <button type="submit" id="saveChangesBtn" class="btn hidden">Save Changes</button>
+            <div id="confirmationMessage" class="hidden"></div> <!-- Confirmation message container -->
+        </form>
+
+        <div class="change-password-section">
+            <button type="button" id="toggleChangePasswordBtn" class="btn">Change Password</button>
+            <div id="changePasswordForm" class="hidden">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password:</label>
+                    <input type="password" id="currentPassword" name="currentPassword" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+                </div>
+                
+                <button type="button" id="confirmChangePasswordBtn" class="btn">Confirm Change</button>
+                <div id="passwordConfirmationMessage" class="hidden"></div> <!-- Password confirmation message container -->
+            </div>
+        </div>
+
+        <div class="last-login-info">
+            <p>Last Login: <span id="lastLoginDate">2023-10-01</span></p>
+            <p>Registration Date: <span id="registrationDate">2023-01-15</span></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="images/MainLogo.png" alt="Logo">
+            <span class="footer-text">Unlock Your Future One Home at a Time.</span>
+        </div>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#">About Me</a>
+                <a href="#">Listings</a>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="#">Help/FAQ</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="footer-column">
+                <h3>More</h3>
+                <a href="#">Services</a>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+    <script>
+        // JavaScript to handle the edit and save functionality
+        document.getElementById('editProfileBtn').addEventListener('click', function() {
+            const inputs = document.querySelectorAll('#profileForm input');
+            const saveButton = document.getElementById('saveChangesBtn');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+
+            // Toggle read-only state and outline color
+            inputs.forEach(input => {
+                input.readOnly = !input.readOnly; // Toggle read-only state
+                if (!input.readOnly) {
+                    input.classList.add('edit-mode'); // Add class for orange outline
+                } else {
+                    input.classList.remove('edit-mode'); // Remove class when not in edit mode
+                }
+            });
+
+            // Toggle button text and show/hide save button
+            if (saveButton.classList.contains('hidden')) {
+                saveButton.classList.remove('hidden'); // Show save button
+            } else {
+                // Simulate form submission and confirmation message
+                confirmationMessage.textContent = 'Changes saved successfully!'; // Confirmation message
+                confirmationMessage.classList.remove('hidden'); // Show confirmation message
+                setTimeout(() => {
+                    confirmationMessage.classList.add('hidden'); // Hide after 3 seconds
+                }, 3000);
+            }
+        });
+
+        document.getElementById('toggleChangePasswordBtn').addEventListener('click', function() {
+            const changePasswordForm = document.getElementById('changePasswordForm');
+            changePasswordForm.classList.toggle('hidden'); // Toggle visibility
+        });
+
+        document.getElementById('confirmChangePasswordBtn').addEventListener('click', function() {
+            const passwordConfirmationMessage = document.getElementById('passwordConfirmationMessage');
+            // Simulate password change confirmation
+            passwordConfirmationMessage.textContent = 'Password changed successfully!'; // Confirmation message
+            passwordConfirmationMessage.classList.remove('hidden'); // Show confirmation message
+            setTimeout(() => {
+                passwordConfirmationMessage.classList.add('hidden'); // Hide after 3 seconds
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
